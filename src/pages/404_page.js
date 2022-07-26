@@ -12,7 +12,7 @@ export class PageNotFound extends Component {
         <Navbar />
         <div className="main_container">
 
-        <h2>Welcome</h2>
+        <h2>page doesnt exists</h2>
           {/* <div className="form_container">
             <form >
             //   <h2>Welcome</h2>
