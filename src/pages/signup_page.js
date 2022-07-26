@@ -4,8 +4,6 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../components/navbar"
 import { storage, auth, registerWithEmailAndPassword, signInWithGoogle, } from "../firebase";
-// import { useState } from "react";
-// import { storage } from "./firebaseConfig";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 
 
@@ -30,43 +28,7 @@ function Register() {
   const togglePassword = () => {
     setPasswordShown(!passwordShown);
   };
-
-
-
-
-
-
-
-
-  const [imgUrl, setImgUrl] = useState(null);
-  const [progresspercent, setProgresspercent] = useState(0);
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
-  //   const file = e.target[0]?.files[0]
-  //   if (!file) return;
-  //   const storageRef = ref(storage, `files/${file.name}`);
-  //   const uploadTask = uploadBytesResumable(storageRef, file);
-
-  //   uploadTask.on("state_changed",
-  //     (snapshot) => {
-  //       const progress =
-  //         Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
-  //       setProgresspercent(progress);
-  //     },
-  //     (error) => {
-  //       alert(error);
-  //     },
-  //     () => {
-  //       getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-  //         setImgUrl(downloadURL)
-  //       });
-  //     }
-  //   );
-  // }
-
-
-
+  
   return (
     <>
       {user ? (
@@ -97,15 +59,9 @@ function Register() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 /><br />
-                {/* <button onClick={togglePassword}>Show Password</button> */}
-                <label htmlFor="profile_photo"> Select a profile photo</label><br />
-                {/* <input name="profile_photo" type="file" onChange={handleChange} accept="/image/*" /> */}
-                {/* <button onClick={handleUpload}>Upload to Firebase</button> */}
-                {/* <br /> */}
-                {/* <p>{percent} "% done"</p><br /> */}
 
 
-                <form 
+                {/* <form 
                 // onSubmit={handleSubmit} 
                 className='form'>
                   <input type='file' />
@@ -120,7 +76,7 @@ function Register() {
                 {
                   imgUrl &&
                   <img src={imgUrl} alt='uploaded file' height={200} />
-                }
+                } */}
 
                 <input
                   type="button"
