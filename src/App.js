@@ -18,7 +18,7 @@ function App() {
           <Route path="/reset" element={<Reset />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
-          <Route path="*" component={PageNotFound} />
+          <Route path="*" element={<PageNotFound />}></Route>
         </Routes>
       </Router>
     </>
