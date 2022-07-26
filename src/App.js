@@ -9,7 +9,9 @@ import Reset from "./pages/reset_page"
 function App() {
   return (
     <>
-      <Router>
+
+    hello mf
+      {/* <Router>
         <Routes>
         <Route path="/" element={<Main />}></Route>
           <Route path="/login" element={<Login />}></Route>
@@ -18,7 +20,7 @@ function App() {
           <Route path="/about" element={<About />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
         </Routes>
-        </Router>
+        </Router> */}
     </>
   );
 }
