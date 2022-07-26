@@ -1,0 +1,143 @@
+.underline {
+    text-decoration: underline;
+}
+
+.form_container {
+    position: absolute;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+    top: 50%;
+    left: calc(50% - 11vw + 40px);
+}
+
+form {
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 3em;
+    width: 30vw;
+    border-radius: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
+        0 2px 2px rgba(0, 0, 0, 0.11),
+        0 4px 4px rgba(0, 0, 0, 0.11),
+        0 8px 8px rgba(0, 0, 0, 0.11),
+        0 16px 16px rgba(0, 0, 0, 0.11),
+        0 32px 32px rgba(0, 0, 0, 0.11);
+    text-align: center;
+    position: relative;
+}
+
+form h1, form h2 {
+    font-weight: 500;
+    color: #fff;
+    opacity: 0.7;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+form p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-decoration: none;
+    color: #ddd;
+    font-size: 15px;
+}
+
+form a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 15px;
+}
+
+form a:hover {
+    text-shadow: 2px 2px 6px #000 40;
+}
+
+form a:active {
+    text-shadow: none;
+}
+
+form input::placeholder {
+    color: white;
+}
+
+form input[type=button]{
+    width: 30% !important;
+}
+
+form input {
+    font-size: 1.2rem;
+    background: transparent;
+    vertical-align: middle;
+    width: 40%;
+    /* height: 30px; */
+    padding: 1em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    margin-bottom: 2em;
+    border: none;
+    border: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
+        0 2px 2px rgba(0, 0, 0, 0.11),
+        0 4px 4px rgba(0, 0, 0, 0.11),
+        0 8px 8px rgba(0, 0, 0, 0.11),
+        0 16px 16px rgba(0, 0, 0, 0.11),
+        0 32px 32px rgba(0, 0, 0, 0.11);
+    color: #fff;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+form input:hover {
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
+        0 2px 2px rgba(0, 0, 0, 0.11),
+        0 4px 4px rgba(0, 0, 0, 0.11),
+        0 8px 8px rgba(0, 0, 0, 0.11),
+        0 16px 16px rgba(0, 0, 0, 0.11),
+        0 32px 32px rgba(0, 0, 0, 0.11);
+}
+
+form input[type=email]:focus,
+form input[type=password]:focus, 
+form input[type=text]:focus {
+    /* font-size: 1.2rem; */
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
+        0 2px 2px rgba(0, 0, 0, 0.11),
+        0 4px 4px rgba(0, 0, 0, 0.11),
+        0 8px 8px rgba(0, 0, 0, 0.11),
+        0 16px 16px rgba(0, 0, 0, 0.11),
+        0 32px 32px rgba(0, 0, 0, 0.11);
+}
+
+form input[type=button] {
+    margin-top: 10px;
+    width: 150px;
+    /* font-size: 1rem; */
+}
+
+form input[type=button]:hover {
+    cursor: pointer;
+}
+
+form input[type=button]:active {
+    background: rgba(255, 255, 255, 0.2);
+    /* font-size: 1.2rem; */
+}
+
+form a,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}

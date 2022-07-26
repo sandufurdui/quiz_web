@@ -1,0 +1,129 @@
+/* background-color: #FDA62B; */
+/* background-color: #C3C3D6; */
+/* background-color: #61BBFE; */
+/* background-color: #6738DC; */
+
+.navbar_container {
+    grid-area: menu;
+    background-color: #FDA62B;
+    /* background-color: rgb(46, 46, 46); */
+    min-width: 5vw;
+    width: 15vw;
+    height: calc(100vh - 40px);
+    /* position: relative; */
+    /* overflow: hidden; */
+    padding-top: 40px;
+    text-align: center;
+    /* position:relative */
+}
+
+.logo {
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.logo-image {
+    display: inline-block;
+    vertical-align: middle;
+    height: 50px;
+}
+
+.logo-text {
+    font-size: 50px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.page_list {
+    padding-left: 20px;
+    /* display: unset; */
+    text-align: left;
+}
+
+.nav_element_div {
+    margin-top: 20px;
+}
+
+.nav_element {
+    /* margin-top: 30px; */
+    font-size: 31.5px;
+    text-decoration: none;
+    color: black;
+    opacity: 80%;
+}
+
+.nav_element_icon {
+    margin-right: 10px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    height: 100px !important;
+    width: inherit;
+    overflow: inherit;
+    height: 40px;
+    /* background: #6da8e2; */
+}
+
+.sign_out_button {
+    background-color: transparent;
+    border: 0px;
+    font-size: 25px !important;
+    color: red;
+}
+
+.sign_in_button {
+    background-color: transparent;
+    border: 0px;
+    font-size: 25px !important;
+    color: green;
+}
+
+.sign_out {
+    font-size: 30px;
+}
+
+.footer .container_profile {
+    background-color: #e4f2fd;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    justify-content: space-evenly;
+}
+
+.footer .container_profile img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-position: center;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.footer .container_profile h2 {
+    color: #334454;
+    font-size: 1.2rem;
+}
+
+.footer .container_profile p {
+    color: #a1b2bc;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.footer .container_profile p b {
+    font-style: italic;
+}
+
+.sign_in_button:hover {
+    cursor: pointer;
+}
+
+.sign_out_button:hover {
+    cursor: pointer;
+}

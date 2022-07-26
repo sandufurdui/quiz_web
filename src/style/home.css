@@ -1,0 +1,64 @@
+.main_container,
+body {
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+    /* width: 0px; */
+}
+
+.main_container::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
+
+/* background-color: #FDA62B; */
+/* background-color: #C3C3D6; */
+/* background-color: #61BBFE; */
+/* background-color: #6738DC; */
+
+.main_container {
+    /* x = 10; */
+    width: calc(85vw - 80px);
+    height: calc(100vh - 80px);
+    grid-area: body;
+    /* background-color: #FDA62B; */
+    /* background-color: #C3C3D6; */
+    /* background-color: #61BBFE; */
+    background-color: #6738DC;
+    /* background-color: #2196F3; */
+    /* background-color: rgb(20, 20, 20); */
+    overflow-y: scroll;
+    padding: 40px;
+}
+
+.homepage {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas:
+        'menu body';
+    /* background-color: blueviolet; */
+    overflow: hidden;
+}
+
+.card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 380px);
+}
+
+.classic_button {
+    background-color: red;
+    border: 0px;
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    /* justify-content: center;
+    vertical-align: middle; */
+
+}
