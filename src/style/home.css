@@ -26,7 +26,7 @@ body::-webkit-scrollbar {
     /* x = 10; */
     width: calc(85vw - 80px);
     height: calc(100vh - 80px);
-    grid-area: body;
+    /* grid-area: body; */
     /* background-color: #FDA62B; */
     /* background-color: #C3C3D6; */
     /* background-color: #61BBFE; */

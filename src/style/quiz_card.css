@@ -1,95 +1,185 @@
-.container {
-    border-radius: 30px 30px 30px 30px;
-    width: 350px;
-    height: 500px;
-    position: relative;
-    /* box-shadow: 0 0 50px rgba(0, 0, 0, 0.315); */
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
-        0 2px 2px rgba(0, 0, 0, 0.11),
-        0 4px 4px rgba(0, 0, 0, 0.11),
-        0 8px 8px rgba(0, 0, 0, 0.11),
-        0 16px 16px rgba(0, 0, 0, 0.11),
-        0 32px 32px rgba(0, 0, 0, 0.11);
-    margin: 20px;
+
+a {
+	text-decoration: none;
 }
 
-.card_quiz_photo {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 350px;
-    height: 500px;
-    border-radius: 30px 30px 30px 30px;
+h1 {
+	font-weight: 300;
 }
 
-.container .container_info {
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 25%;
-    display: flex;
-    align-items: flex-end;
-    padding: 15px 30px;
-    color: #fff;
+.row {
+	max-width: 900px;
+	margin: 50px auto 0;
 }
 
-.container .container_info span {
-    margin-right: 20px;
+.card {
+	float: left;
+	width: 100%;
+	height: 100%;
 }
 
-.container .container_info i {
-    margin-right: 10px;
+.card .menu-content {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
 }
 
-.container .container_profile {
-    background-color: #ececec;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    justify-content: space-evenly;
-    border-radius: 0px 0px 30px 30px;
+.card .menu-content::before,
+.card .menu-content::after {
+	/* content: "menu contend before"; */
+	display: table;
 }
 
-.container .container_profile img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-position: center;
-    object-fit: cover;
-    margin-right: 10px;
+.card .menu-content::after {
+	clear: both;
 }
 
-.container .container_profile h2 {
-    color: #334454;
-    font-size: 1.2rem;
+.card .menu-content li {
+	display: inline-block;
 }
 
-.container .container_profile p {
-    color: #a1b2bc;
-    font-size: 0.8rem;
-    margin-top: 5px;
+.card .menu-content a {
+	color: #fff;
 }
 
-.container .container_profile p b {
-    font-style: italic;
+.card .menu-content span {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	font-size: 10px;
+	font-weight: 700;
+	transform: translate(-50%, 0);
 }
 
-.capital {
-    text-transform: capitalize;
-    margin-bottom: 0px !important;
+.card .wrapper {
+	background-color: #fff;
+	min-height: 100%;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
 }
 
-.play {
-    background-color: transparent;
-    border: 0px;
-    font-size: 30px;
-    color: rgb(10, 141, 10);
+.card .wrapper:hover .data {
+	transform: translateY(0);
+	
 }
 
-.play:hover {
-    color: rgba(10, 141, 10, 0.774);
+.card .data {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	transform: translateY(calc(70px + 1em));
+	transition: transform 0.3s;
+}
+
+.card .data .content {
+	background: rgb(0,0,0);
+	background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7049194677871149) 47%, rgba(0, 0, 0, 0) 100%);
+	padding: 1em;
+	position: relative;
+	z-index: 1;
+}
+
+.card .author {
+	font-size: 12px;
+}
+
+.card .title {
+	margin-top: 10px;
+}
+
+.card .text {
+	height: 70px;
+	margin: 0;
+}
+
+.card input[type=checkbox] {
+	display: none;
+}
+
+.card input[type=checkbox]:checked+.menu-content {
+	transform: translateY(-60px);
+}
+
+.quiz_card .wrapper {
+	background: center / cover no-repeat;
+}
+
+.quiz_card .wrapper:hover .menu-content span {
+	transform: translate(-50%, -10px);
+	opacity: 1;
+}
+
+.quiz_card .header {
+	color: #fff;
+	padding: 1em;
+}
+
+.quiz_card .header::before,
+.quiz_card .header::after {
+	/* content: "header before"; */
+	display: table;
+}
+
+.quiz_card .header::after {
+	clear: both;
+}
+
+.quiz_card .header .date {
+	float: left;
+	font-size: 12px;
+}
+
+.quiz_card .menu-content {
+	float: right;
+}
+
+.quiz_card .menu-content li {
+	margin: 0 5px;
+	position: relative;
+}
+
+.quiz_card .menu-content span {
+	transition: all 0.3s;
+	opacity: 0;
+}
+
+.quiz_card .data {
+	color: #fff;
+	transform: translateY(calc(70px + 4em));
+}
+
+.quiz_card .title a {
+	color: #fff;
+}
+
+.quiz_card .button {
+	display: block;
+	width: 100px;
+	margin: 2em auto 1em;
+	text-align: center;
+	font-size: 12px;
+	color: #fff;
+	line-height: 1;
+	position: relative;
+	font-weight: 700;
+}
+
+.quiz_card .button::after {
+	/* content: "button after"; */
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translate(0, -50%);
+	transition: all 0.3s;
+}
+
+.quiz_card:hover{
+	background-color: blue;
+}
+
+.quiz_card .button:hover::after {
+	transform: translate(5px, -50%);
+	opacity: 1;
 }

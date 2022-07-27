@@ -2,7 +2,7 @@ import React, { Componentm, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db, logout, app, localUID } from "../firebase";
-import { doc, getDocFromCache, SnapshotMetadata, getDoc } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 import { getAuth, updateProfile } from "firebase/auth";
 import { Firestore } from 'firebase/firestore';
 import logo from "../style/img/logo.png"

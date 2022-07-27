@@ -20,9 +20,9 @@ function StartQuiz(props) {
     return (
         <>
             <button
-                className="fas fa-play play"
+                // className="fas fa-play play"
                 onClick={showModal}
-            >
+            > Start quiz
             </button>
             {
                 displayModal ?

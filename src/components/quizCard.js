@@ -5,19 +5,38 @@ import quiz_photo from "../style/img/image.jpg"
 import quiz from './quiz';
 import StartQuiz from "./startQuiz"
 
-export class quizCard extends Component {
+const styles = {
+    card: {
+        margin: '15px 10px',
+        padding: 0,
+        borderRadius: '16px',
+    },
+    small: {
+        gridRowEnd: 'span 26'
+    },
+    medium: {
+        gridRowEnd: 'span 33'
+    },
+    large: {
+        gridRowEnd: 'span 45'
+    }
+}
+
+export class Card extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
             quiz: [],
             id: this.props.id,
-            title: "",
+            title: "Empty title",
             description: "",
             dificulty: 0,
             numberOfQuestions: 0,
             display: false,
             done: false,
             views: 0,
+            author: "Default author",
             com_num: 0,
             quiz_photo: quiz_photo,
             author_photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
@@ -70,29 +89,42 @@ export class quizCard extends Component {
         this.getData()
     }
 
+
     render() {
         return (
             <>
                 {this.state.done && this.state.display ?
-                    <div className="container">
-                        <img src={quiz_photo} className="card_quiz_photo" />
-                        <div className="container_info">
-                            <span><i className="fas fa-eye"></i>{this.state.views}</span>
-                            <span><i className="fas fa-comment-alt"></i>{this.state.com_num}</span>
-                            <span><i className="fas fa-clock"></i>21m</span>
-                            <span><i className="fas fa-question"></i>{this.state.numberOfQuestions}</span>
-                        </div>
-                        <div className="container_profile">
-                            <img
-                                src={this.state.author_photo}
-                                alt="author"
-                            />
-                            <div>
-                                <h2 className="capital">{this.state.title}</h2>
-                                <p>by <b className="capital">this.author</b></p>
-                            </div>
-                            <div>
-                                <StartQuiz id={this.state.id} quiz={this.state.quiz} length={this.state.numberOfQuestions} title={this.state.quiz.title} description={this.state.description} />
+                    <div style={{
+                        ...styles.card,
+                        ...styles[this.props.size]
+                    }}>
+                        <div className="quiz_card card">
+                            <div className="wrapper" style={{ backgroundImage: `url(${quiz_photo})` }}>
+                                <div className="header">
+                                    <div className="date">
+                                        <span className="day">12</span>
+                                        <span className="month"> Aug</span>
+                                        <span className="year"> 2016</span>
+                                    </div>
+                                    <ul className="menu-content">
+                                        <li><a href="#" className="fa fa-eye"><span>{this.state.views}</span></a></li>
+                                        <li><a href="#" className="fas fa-comment-alt"><span>{this.state.com_num}</span></a></li>
+                                        <li><a href="#" className="fas fa-question"><span>{this.state.numberOfQuestions}</span></a></li>
+                                    </ul>
+                                </div>
+                                <div className="data">
+                                    <div className="content">
+                                        <span className="author">by {this.state.author}</span>
+                                        <h1 className="title"><a href="#">{this.state.title}</a></h1>
+                                        <p className="text">{this.state.description}</p>
+                                        {/* <div> */}
+                                        {/* <StartQuiz id={this.state.id} quiz={this.state.quiz} length={this.state.numberOfQuestions} title={this.state.quiz.title} description={this.state.description} /> */}
+                                        {/* </div> */}
+                                        <a href="#" className="button">
+                                            read more  {/* <StartQuiz id={this.state.id} quiz={this.state.quiz} length={this.state.numberOfQuestions} title={this.state.quiz.title} description={this.state.description} /> */}
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div> :
@@ -103,4 +135,4 @@ export class quizCard extends Component {
     }
 }
 
-export default quizCard
+export default Card;
